@@ -1,0 +1,6 @@
+[console_scripts]
+VD-even = VD_games.scripts.VD_even:main
+VD-games = VD_games.scripts.VD_main:main
+brain-calc = VD_games.scripts.brain_calc:main
+vd-brain = VD_games.scripts.brain_calc.py:main
+vd-gcd = VD_games.scripts.VD_gcd:main

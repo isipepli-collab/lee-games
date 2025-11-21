@@ -1,11 +1,9 @@
-
-[project.scripts]
-VD-even = "VD_games.scripts.VD_even:main"[project]
+[project]
 name = "games-project-lee"
 version = "0.1.0"
 description = "Add your description here"
 readme = "README.md"
-requires-python = ">3.12"
+requires-python = ">=3.12"
 dependencies = [
     "prompt>=0.4.1",
 ]
@@ -17,6 +15,16 @@ build-backend = "hatchling.build"
 [tool.hatch.build.targets.wheel]
 packages = ["VD_games"]
 
-[project.scripts]
-VD-games = "VD_games.scripts.VD_main:main"
+[dependency-groups]
+dev = [
+    "ruff>=0.14.2",
+]
 
+[project.scripts]
+brain-calc = "VD_games.scripts.brain_calc:main"
+vd-gcd = "VD_games.scripts.VD_gcd:main"
+vd-brain = "VD_games.scripts.brain_calc.py:main"
+VD-games = "VD_games.scripts.VD_main:main"
+VD-even = "VD_games.scripts.VD_even:main"
+VD-progression = "VD_games.scripts.VD_progression:main"
+VD-prime = "VD_games.scripts.VD_prime:main"
